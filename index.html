@@ -1,15 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>Contacts</title>
+
+  <!-- main css sheet -->
   <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <!-- font awesome import -->
+  <script src="https://kit.fontawesome.com/6b458d94cf.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  Hello world
+  <header class="main-head">
+    <h1 class="big-title">Répertoire de contact</h1>
+  </header>
+
+  <div class="container">
+    <div class="form-contact">
+      <h2 class="small-title">Formulaire de contact</h2>
+      <form action="#" class="form">
+        <div class="form-group">
+          <label for="prenom">Prénom</label>
+          <input type="text" name="prenom" id="prenom">
+        </div>
+        <div class="form-group">
+          <label for="nom">Nom</label>
+          <input type="text" name="nom" id="nom">
+        </div>
+        <div class="form-group">
+          <label for="group">Groupe</label>
+          <select name="group" id="group">
+            <option value="famille">Famille</option>
+            <option value="amis">Amis</option>
+            <option value="collegues">Collègues</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="bio">Bio</label>
+          <textarea name="group" id="group" cols="30" rows="5"></textarea>
+        </div>
+        <div class="form-file">
+          <label class="label-file" id="label-file" for="file">Choisir un fichier</label>
+          <input type="file" class="file" name="img" id="file">
+          <img src="contact.jpg" alt="contact-img">
+        </div>
+        <div class="form-group-buttons">
+          <button type="submit" class="submit" id="submit">Créer</button>
+          <button type="reset" class="reset" id="reset">Réinit.</button>
+        </div>
+      </form>
+    </div>
+    <div class="contact-list">
+      <h2 class="small-title">Liste de contact</h2>
+      <div class="contacts">
+        <div class="contact">
+          <img src="contact.jpg" alt="contact img" class="contact-img">
+          <div class="contact-info">
+            <p class="contact-name">Prénom Nom</p>
+            <p class="contact-group">Groupe</p>
+            <p class="contact-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum officia iste enim ut totam blanditiis sequi soluta architecto expedita tempore dolorum ipsa esse, similique cupiditate doloremque. Maxime eum unde tenetur.</p>
+          </div>
+          <i class="fa-solid fa-xmark cross"></i>
+        </div>
+        <div class="contact">
+          <img src="contact.jpg" alt="contact img" class="contact-img">
+          <div class="contact-info">
+            <p class="contact-name">Prénom Nom</p>
+            <p class="contact-group">Groupe</p>
+            <p class="contact-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum officia iste enim ut totam blanditiis sequi soluta architecto expedita tempore dolorum ipsa esse, similique cupiditate doloremque. Maxime eum unde tenetur.</p>
+          </div>
+          <i class="fa-solid fa-xmark cross"></i>
+        </div>
+        <div class="contact">
+          <img src="contact.jpg" alt="contact img" class="contact-img">
+          <div class="contact-info">
+            <p class="contact-name">Prénom Nom</p>
+            <p class="contact-group">Groupe</p>
+            <p class="contact-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum officia iste enim ut totam blanditiis sequi soluta architecto expedita tempore dolorum ipsa esse, similique cupiditate doloremque. Maxime eum unde tenetur.</p>
+          </div>
+          <i class="fa-solid fa-xmark cross"></i>
+        </div>
+        <div class="contact">
+          <img src="contact.jpg" alt="contact img" class="contact-img">
+          <div class="contact-info">
+            <p class="contact-name">Prénom Nom</p>
+            <p class="contact-group">Groupe</p>
+            <p class="contact-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum officia iste enim ut totam blanditiis sequi soluta architecto expedita tempore dolorum ipsa esse, similique cupiditate doloremque. Maxime eum unde tenetur.</p>
+          </div>
+          <i class="fa-solid fa-xmark cross"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
   <script src="script.js"></script>
 </body>
 
