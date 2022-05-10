@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>Contacts</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -35,14 +35,16 @@
         </div>
         <div class="form-group">
           <label for="bio">Bio</label>
-          <textarea name="group" id="group" cols="30" rows="10"></textarea>
+          <textarea name="group" id="group" cols="30" rows="5"></textarea>
         </div>
-        <div class="form-control">
-          <input type="file" name="img" id="img">
+        <div class="form-file">
+          <label class="label-file" id="label-file" for="file">Choisir un fichier</label>
+          <input type="file" class="file" name="img" id="file">
+          <img src="contact.jpg" alt="contact-img">
         </div>
         <div class="form-group-buttons">
           <button type="submit" class="submit" id="submit">Créer</button>
-          <button type="reset" class="reset" id="reset">Réunit.</button>
+          <button type="reset" class="reset" id="reset">Réinit.</button>
         </div>
       </form>
     </div>
