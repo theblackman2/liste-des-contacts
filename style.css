@@ -34,6 +34,7 @@ textarea{
 
 .form-contact{
   width: 40%;
+  height: 600px;
   background: rgb(248, 246, 246);
   box-shadow: 1px 1px 1.5px 1px rgb(67, 180, 233);
 }
@@ -111,8 +112,8 @@ textarea{
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 20px 10px;
-  margin: 40px 0;
+  padding: 10px;
+  margin-top: 10px;
 }
 
 .form-group-buttons button{
@@ -139,6 +140,19 @@ textarea{
   background: rgba(255, 0, 0, 0.575);
 }
 
+.error-empty{
+  color: #f00;
+  display: none;
+}
+
+.visible{
+  display: inline-block;
+}
+
+.hidden{
+  display: none;
+}
+
 .contact-list{
   width: 58%;
   background: rgb(248, 246, 246);
@@ -154,6 +168,11 @@ textarea{
   position: relative;
 }
 
+.contact:hover{
+  cursor: pointer;
+  opacity: .8;
+}
+
 .contact-img{
   width: 100px;
   height: 100px;
@@ -167,7 +186,7 @@ textarea{
 }
 
 .contact-group{
-  margin: 5px 0;
+  margin: 7px 0;
 }
 
 .cross{
@@ -180,4 +199,25 @@ textarea{
 
 .cross:hover{
   cursor: pointer;
+}
+
+@media only screen and (max-width: 650px){
+  .container{
+    flex-direction: column;
+  }
+
+  .form-contact{
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .contact-list{
+    width: 100%;
+  }
+
+  .contact{
+    flex-direction: column;
+    text-align: center;
+  }
 }
