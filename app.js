@@ -1,6 +1,8 @@
 const form = document.querySelector(".form")
 const inputs = form.elements
 const contactArea = document.querySelector(".contacts")
+const addContact = document.querySelector(".add-contact")
+const formContact = document.querySelector(".form-contact")
 
 //générer un contact
 const generateContact = function(arr){
@@ -88,7 +90,9 @@ form.addEventListener("submit", function(e){
       if(imgUrl){
         let contact = generateContact(valuesArray)
         contactArea.appendChild(contact)
+        
         created = true
+        formContact.classList.remove("show")
       }else{
         alert("Vous devez remplir tous les champs")
       }
@@ -107,6 +111,7 @@ form.addEventListener("submit", function(e){
         }
       }
       created = true
+      formContact.classList.remove("show")
     }
 
     if(created){
@@ -150,6 +155,8 @@ form.addEventListener("submit", function(e){
       let contactDescription = contacts[i].children[1].children[2]
 
       let contactArray = [img, contactName, contactGroup, contactDescription, contactId]
+
+      formContact.classList.add("show")
 
       getContactInfo(contactArray)
     })
