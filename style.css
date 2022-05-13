@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 input{
@@ -12,6 +12,11 @@ input{
 textarea{
   resize: none;
   all: unset;
+}
+
+select,
+select:focus{
+  outline: none;
 }
 
 .error{
@@ -89,6 +94,27 @@ textarea{
   padding: 0 8px;
   font-size: small;
   opacity: .8;
+}
+
+.form-group select,
+.form-group select:focus{
+  border: none;
+}
+
+.form-group select:hover{
+  cursor: pointer;
+}
+
+.select{
+  position: relative;
+}
+
+.form-group .more{
+  transform: rotate(90deg);
+  position: absolute;
+  top: 50%;
+  right: 2px;
+  color: #2E81ED;
 }
 
 .form-group textarea{
