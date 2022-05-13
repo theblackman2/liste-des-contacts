@@ -3,6 +3,36 @@ const inputs = form.elements
 const contactArea = document.querySelector(".contacts")
 const addContact = document.querySelector(".add-contact")
 const formContact = document.querySelector(".form-contact")
+const globalError = document.querySelector(".error-msg")
+let valid = true //tous les champs sont valides
+
+//validation des différents inputs
+
+//validation des noms
+const validateNames = function(input){
+  input.addEventListener("change", function(e){
+    let value = input.value
+    if(!(value.indexOf(" ") < 0 && value.length > 1)){
+      input.nextElementSibling.classList.add("visible")
+      input.classList.add("invalid")
+      valid = false
+    }else{
+      input.nextElementSibling.classList.remove("visible")
+      input.classList.remove("invalid")
+      valid = true
+    }
+  })
+}
+
+validateNames(inputs.prenom)
+validateNames(inputs.nom)
+
+//validation de la description
+
+//validation de l'image
+const validateImg = function(file){
+  return file['type'].split("/")[0] == 'image'
+}
 
 //générer un contact
 const generateContact = function(arr){
@@ -53,7 +83,14 @@ const generateContact = function(arr){
 let imgPreview = document.querySelector(".img-preview")
 const inputFile = inputs.img
 inputFile.addEventListener("change", function(e){
+  let errorMessage = document.querySelector(".error-file")
   let filename = inputFile.files[0]
+  if(!validateImg(filename)){
+    errorMessage.classList.add("visible")
+    e.preventDefault()
+  }else{
+    errorMessage.classList.remove("visible")
+  }
   imgPreview.src = URL.createObjectURL(filename)
 })
 
@@ -80,7 +117,7 @@ form.addEventListener("submit", function(e){
   let group = inputs.group.value
   let description = inputs.description.value
 
-  if(firstName && name && group && description){
+  if(firstName && name && group && description && valid){
   
     const valuesArray = [imgUrl, firstName, name, group, description]
 
@@ -93,8 +130,9 @@ form.addEventListener("submit", function(e){
         
         created = true
         formContact.classList.remove("show")
+        globalError.classList.remove("visible")
       }else{
-        alert("Vous devez remplir tous les champs")
+        globalError.classList.add("visible")
       }
     }else if(inputs.submit.textContent == "Mod."){
       let contacts = contactArea.children
@@ -112,6 +150,7 @@ form.addEventListener("submit", function(e){
       }
       created = true
       formContact.classList.remove("show")
+      globalError.classList.remove("visible")
     }
 
     if(created){
@@ -123,7 +162,7 @@ form.addEventListener("submit", function(e){
     }
 
   }else{
-    alert("Vous devez remplir tous les champs")
+    globalError.classList.add("visible")
   }
 })
 
