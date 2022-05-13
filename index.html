@@ -24,13 +24,22 @@
     <div class="form-contact">
       <h2 class="small-title">Formulaire de contact</h2>
       <form enctype="multipart/form-data" action="#" class="form">
+        <div class="error-msg error">
+          Ne laissez aucun champ vide, et vos données doivent être valides
+        </div>
         <div class="form-group">
           <label for="prenom">Prénom</label>
           <input type="text" name="prenom" id="prenom">
+          <span class="firstname-error error">
+            Le prenom doit avoir au moins 2 caractères, pas d'espace
+          </span>
         </div>
         <div class="form-group">
           <label for="nom">Nom</label>
           <input type="text" name="nom" id="nom">
+          <span class="name-error error">
+            Le nom doit avoir au moins 2 caractères, pas d'espace
+          </span>
         </div>
         <div class="form-group">
           <label for="group">Groupe</label>
@@ -45,8 +54,11 @@
           <textarea name="description" id="description" cols="30" rows="5"></textarea>
         </div>
         <div class="form-file">
-          <label class="label-file" id="label-file" for="file">Choisir un fichier</label>
           <input type="file" accept="image/*" class="file" name="img" id="file">
+          <div class="choose-file">
+            <label class="label-file" id="label-file" for="file">Choisir un fichier</label>
+            <span class="error-file error">Format invalide</span>
+          </div>
           <img width="100" height="100" class="img-preview" alt="Preview">
         </div>
         <input type="hidden" name="id">

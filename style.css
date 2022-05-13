@@ -14,6 +14,15 @@ textarea{
   all: unset;
 }
 
+.error{
+  color: #EB5656;
+  display: none;
+}
+
+.error-msg{
+  text-align: center;
+}
+
 .main-head{
   width: 100%;
   height: 75px;
@@ -42,7 +51,6 @@ textarea{
 
 .form-contact{
   width: 40%;
-  height: 600px;
   background: rgb(248, 246, 246);
   box-shadow: 1px 1px 1.5px 1px rgb(67, 180, 233);
 }
@@ -81,7 +89,6 @@ textarea{
   padding: 0 8px;
   font-size: small;
   opacity: .8;
-  border: none;
 }
 
 .form-group textarea{
@@ -96,6 +103,7 @@ textarea{
   display: flex;
   margin-top: 20px;
   justify-content: space-between;
+  text-align: center;
 }
 
 .form-file img{
@@ -109,11 +117,15 @@ textarea{
 .label-file{
   padding: 8px;
   background-color: rgb(233, 230, 230);
-  height: 10%;
 }
 
 .label-file:hover{
   cursor: pointer;
+}
+
+.choose-file{
+  display: flex;
+  flex-direction: column;
 }
 
 .form-group-buttons{
@@ -146,10 +158,6 @@ textarea{
 
 .reset{
   background: #EB5656;
-}
-
-.visible{
-  display: inline-block;
 }
 
 .hidden{
@@ -202,6 +210,14 @@ textarea{
 
 .cross:hover{
   cursor: pointer;
+}
+
+.visible{
+  display: inline-block;
+}
+
+.invalid{
+  border:1px solid #EB5656;
 }
 
 @media only screen and (max-width: 650px){
