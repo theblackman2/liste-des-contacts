@@ -17,7 +17,7 @@ textarea{
 .main-head{
   width: 100%;
   height: 75px;
-  background: rgb(60, 163, 248);
+  background: #2E81ED;
   color: #fff;
   padding: 0 40px;
   display: flex;
@@ -52,7 +52,7 @@ textarea{
   height: 50px;
   text-align: center;
   padding: 10px 0;
-  background: rgb(60, 163, 248);
+  background: #2E81ED;
   color: #fff;
   font-size: 19px;
 }
@@ -70,7 +70,7 @@ textarea{
 }
 
 .form-group label{
-  color: rgb(87, 166, 240);
+  color: #2E81ED;
 }
 
 .form-group input,
@@ -141,16 +141,11 @@ textarea{
 }
 
 .submit{
-  background: rgb(60, 163, 248);
+  background: #2E81ED;
 }
 
 .reset{
-  background: rgba(255, 0, 0, 0.575);
-}
-
-.error-empty{
-  color: #f00;
-  display: none;
+  background: #EB5656;
 }
 
 .visible{
@@ -171,7 +166,7 @@ textarea{
   display: flex;
   align-items: center;
   padding: 15px;
-  border: 1px solid rgb(67, 180, 233);
+  border: 1px solid #2E81ED;
   background: #fff;
   position: relative;
 }
@@ -202,7 +197,7 @@ textarea{
   top: 20px;
   right: 20px;
   font-size: 30px;
-  color: #f00;
+  color: #EB5656;
 }
 
 .cross:hover{
