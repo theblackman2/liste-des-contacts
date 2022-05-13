@@ -251,6 +251,10 @@ select:focus{
     flex-direction: column;
   }
 
+  .main-head i{
+    display: inline-block;
+  }
+
   .form-contact{
     width: 80%;
     height: auto;
@@ -280,10 +284,6 @@ select:focus{
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-
-  .main-head i{
-    display: inline-block;
   }
 
   .main-head i:hover{
