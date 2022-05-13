@@ -4,6 +4,7 @@ const contactArea = document.querySelector(".contacts")
 const addContact = document.querySelector(".add-contact")
 const formContact = document.querySelector(".form-contact")
 const globalError = document.querySelector(".error-msg")
+const errors = document.querySelectorAll(".error")
 let valid = true //tous les champs sont valides
 
 //validation des différents inputs
@@ -107,6 +108,7 @@ const getContactInfo = function(arr){
   inputs.id.value = arr[4].textContent
 
   inputs.submit.textContent = "Mod."
+  inputs.reset.textContent = "Annuler"
 }
 
 //ajout d'un contact et modification d'un contact
@@ -208,5 +210,15 @@ form.addEventListener("submit", function(e){
 let inpuReset = inputs.reset
 inpuReset.addEventListener("click", function(e){
   inputs.submit.textContent = "Créer"
-  inputs.img.nextElementSibling.src = ""
+  for(let error of errors){
+    error.classList.remove("visible")
+  }
+  for(let input of inputs){
+    input.classList.remove("invalid")
+  }
+  if(this.textContent == "Annuler"){
+    this.textContent = "Réinit."
+    formContact.classList.remove("show")
+  }
+  imgPreview.src = ""
 })
